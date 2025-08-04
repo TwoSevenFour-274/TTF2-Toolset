@@ -1,5 +1,3 @@
-# 修改后的代码如下，主要在主界面右侧添加了指定文本和Github链接按钮
-
 import os
 import shutil
 import json
@@ -1237,4 +1235,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = MainInterface(root)
     root.mainloop()
+
     
