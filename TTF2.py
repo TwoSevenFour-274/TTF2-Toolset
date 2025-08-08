@@ -46,7 +46,7 @@ class MainInterface:
         
       
         right_content = ttk.Frame(right_frame)
-        right_content.pack(expand=True)  # 让内容在右侧框架中居中
+        right_content.pack(expand=True) 
         
      
         ttk.Label(
@@ -1225,4 +1225,5 @@ if __name__ == "__main__":
     root.mainloop()
 
     
+
 
