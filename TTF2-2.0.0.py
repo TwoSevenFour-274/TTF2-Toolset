@@ -16,6 +16,12 @@ import urllib.parse
 import re
 import threading
 
+def get_app_dir():
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)
+    else:
+        return os.path.dirname(os.path.abspath(sys.argv[0]))
+
 class MainInterface:
     def __init__(self, root):
         self.root = root
@@ -36,7 +42,7 @@ class MainInterface:
         self.uninstall_buttons = {}        
         self.download_buttons = {}
         
-        self.local_storage = os.path.join(os.path.dirname(os.path.abspath(__file__)), "框架储存位置")
+        self.local_storage = os.path.join(get_app_dir(), "框架储存位置")
         os.makedirs(self.local_storage, exist_ok=True)
         
         self.create_main_widgets()
@@ -44,8 +50,8 @@ class MainInterface:
         self.install_window = None
         self.uninstall_window = None
 
-        self.local_storage = os.path.join(os.path.dirname(os.path.abspath(__file__)), "框架储存位置")
-        self.ensure_local_storage_exists()  
+        self.local_storage = os.path.join(get_app_dir(), "框架储存位置")
+        self.ensure_local_storage_exists() 
 
     def center_window(self, window):
         window.update_idletasks()
