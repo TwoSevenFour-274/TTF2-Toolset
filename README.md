@@ -1,6 +1,6 @@
 # TTF2-工具集
 这是一个集成部分TTF2功能的程序 （还在开发中）  
-开发人员：EightTwoSeven(274),Chatgpt
+开发人员：ElainaAshenWitch(274),Chatgpt
 
 # 2.0.0-在线安装
 1.添加——必看——标题与 内容  
